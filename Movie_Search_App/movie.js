@@ -13,7 +13,12 @@ const movieList = document.getElementById("movieList");
 const poster = document.getElementById("poster");
 
 searchButton.addEventListener("click", (e) => {
-  fetch("http://www.omdbapi.com/?s=" + movieName.value +"&y=" +yearLaunched.value +"&apikey=8e70360f"
+  fetch(
+    "http://www.omdbapi.com/?s=" +
+      movieName.value +
+      "&y=" +
+      yearLaunched.value +
+      "&apikey=8e70360f"
   )
     .then((response) => {
       return response.json();
